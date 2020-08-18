@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wuFragment">
+
+
+    <fragment
+        android:id="@+id/wuFragment"
+        android:name="com.example.jetpack.navigations.WuFragment"
+        android:label="fragment_wu"
+        tools:layout="@layout/fragment_wu" >
+        <argument
+            android:name="strategist"
+            app:argType="string"
+            android:defaultValue="Hooh"/>
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_wuFragment_to_placeholder_wei"
+            app:destination="@id/weiFragment" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_wuFragment_to_placeholder_shu"
+            app:destination="@id/placeholder_shu" />
+    </fragment>
+    <fragment
+        android:id="@+id/weiFragment"
+        android:name="com.example.jetpack.navigations.WeiFragment"
+        tools:layout="@layout/fragment_wei">
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_placeholder_wei_to_placeholder_shu"
+            app:destination="@id/placeholder_shu" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_placeholder_wei_to_wuFragment"
+            app:destination="@id/wuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placeholder_shu"
+        android:name="com.example.jetpack.navigations.ShuFragment"
+        tools:layout="@layout/fragment_shu">
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_placeholder_shu_to_wuFragment"
+            app:destination="@id/wuFragment" />
+        <action
+            app:enterAnim="@anim/fade_in"
+            app:popEnterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popExitAnim="@anim/fade_out"
+            android:id="@+id/action_placeholder_shu_to_placeholder_wei"
+            app:destination="@id/weiFragment" />
+    </fragment>
+</navigation>
