@@ -9,18 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".navigations.NavigationContainerActivity"/>
-        <activity android:name=".fragmentadapter.FragmentPagerActivity"></activity>
-        <activity android:name=".fragmentadapter.FragmentPagerStateActivity" />
-        <activity android:name=".fragmentadapter.FragmentStateContainerActivity">
+        <activity android:name=".fragmentransaction.FragmentTransactionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".livedata.MainActivity">
+        <activity android:name=".navigations.NavigationContainerActivity" />
+        <activity android:name=".fragmentadapter.FragmentPagerActivity" />
+        <activity android:name=".fragmentadapter.FragmentPagerStateActivity" />
+        <activity android:name=".fragmentadapter.FragmentStateContainerActivity">
         </activity>
+        <activity android:name=".livedata.MainActivity"></activity>
     </application>
 
 </manifest>
